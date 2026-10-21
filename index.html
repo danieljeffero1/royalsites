@@ -1,160 +1,216 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoyalSites | Build Your Kingdom Online</title>
+  <title>RoyalSites — AI Website Builder</title>
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #142744;
-      background: #f3f6fb;
+      color: #172033;
+      background: #f5f7fc;
     }
     header {
-      background: #071b33;
-      color: white;
-      padding: 22px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-    }
-    .logo { font-size: 27px; font-weight: bold; }
-    .gold { color: #ffc43d; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 8px;
-      font-size: 14px;
-    }
-    .hero {
-      text-align: center;
-      padding: 75px 20px;
-      background: linear-gradient(135deg, #071b33, #14548b);
-      color: white;
-    }
-    .hero h1 { font-size: clamp(38px, 7vw, 64px); margin: 0 0 15px; }
-    .hero p { line-height: 1.7; max-width: 620px; margin: 0 auto 25px; }
-    .button {
-      display: inline-block;
-      background: #ffc43d;
-      color: #071b33;
-      text-decoration: none;
-      padding: 14px 22px;
-      border-radius: 7px;
-      font-weight: bold;
-      margin: 5px;
-    }
-    section { padding: 45px 20px; }
-    h2 { text-align: center; font-size: 30px; }
-    .intro { text-align: center; line-height: 1.7; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      max-width: 1050px;
-      margin: 28px auto 0;
-    }
-    .card {
+      padding: 18px 6%;
       background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 18px #071b3312;
+      border-bottom: 1px solid #e5e7eb;
     }
-    .card h3 { color: #14548b; }
-    .card p { line-height: 1.6; }
-    .build { background: #e3edf9; text-align: center; }
-    footer {
-      background: #071b33;
-      color: #d9e5f3;
-      text-align: center;
+    .logo {
+      color: #243b80;
+      font-size: 25px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    a, button { cursor: pointer; }
+    nav a {
+      text-decoration: none;
+      color: #26324a;
+      padding: 10px;
+    }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 19px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .primary { background: #304cbb; color: white; }
+    .secondary { background: white; color: #304cbb; border: 1px solid #304cbb; }
+    main { max-width: 1000px; margin: auto; padding: 55px 20px; }
+    .hero { text-align: center; padding: 35px 0; }
+    h1 { font-size: clamp(34px, 6vw, 56px); margin-bottom: 15px; }
+    .hero p { font-size: 19px; line-height: 1.6; color: #586174; }
+    .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+    section { margin-top: 45px; }
+    .panel {
+      background: white;
+      border-radius: 14px;
       padding: 25px;
-      font-size: 13px;
+      box-shadow: 0 5px 24px #1720330c;
     }
-    @media (max-width: 600px) {
-      header { justify-content: center; text-align: center; }
-      nav { line-height: 2.2; }
-      .hero { padding: 55px 18px; }
+    label { display: block; font-weight: bold; margin: 15px 0 7px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd2df;
+      border-radius: 8px;
+      font: inherit;
     }
+    textarea { min-height: 110px; resize: vertical; }
+    .templates { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .template {
+      background: white;
+      border: 1px solid #e1e5ef;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .template h3 { margin-top: 0; }
+    .hidden { display: none; }
+    #output { white-space: pre-wrap; overflow-wrap: anywhere; background: #f0f3fa; padding: 15px; border-radius: 8px; }
+    footer { text-align: center; padding: 25px; color: #687184; }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">♛ Royal<span class="gold">Sites</span></div>
+    <a class="logo" href="#home">RoyalSites</a>
     <nav>
       <a href="#home">Home</a>
-      <a href="#features">Features</a>
       <a href="#templates">Templates</a>
-      <a href="#build">Get Started</a>
+      <a href="#builder">Website Builder</a>
+      <a href="#signin">GitHub Sign In</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <h1>Build Your Kingdom Online.</h1>
-      <p>Create a website for your business, nonprofit, portfolio, or big idea. RoyalSites is designed to help you take control of your online presence.</p>
-      <a class="button" href="#build">Start Building</a>
-      <a class="button" href="#templates">Explore Templates</a>
+    <section id="home" class="hero">
+      <h1>Build Your Website with RoyalSites</h1>
+      <p>Create your next website with an easy-to-use builder.<br>
+      Choose a template, describe your idea, and start building.</p>
+      <div class="actions">
+        <a class="btn primary" href="#builder">Get Started</a>
+        <a class="btn secondary" href="#templates">Explore Templates</a>
+      </div>
     </section>
 
-    <section id="features">
-      <h2>Welcome to RoyalSites</h2>
-      <p class="intro">A new vision for website creation: simple to start, flexible to customize, and built to grow.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>✦ Easy to Customize</h3>
-          <p>Build your brand with your own words, colors, images, and ideas.</p>
-        </article>
-        <article class="card">
-          <h3>⌘ More Control</h3>
-          <p>Keep your website files in your own GitHub repository.</p>
-        </article>
-        <article class="card">
-          <h3>▣ Mobile Friendly</h3>
-          <p>Give visitors a clean experience on phones, tablets, and computers.</p>
-        </article>
+    <section id="builder" class="panel">
+      <h2>Website Builder</h2>
+      <p>Enter your details to create a starter website file.</p>
+      <form id="siteForm">
+        <label for="siteName">Website or business name</label>
+        <input id="siteName" required placeholder="My Awesome Business">
+        <label for="headline">Headline or slogan</label>
+        <input id="headline" placeholder="Helping you succeed">
+        <label for="description">Describe your website</label>
+        <textarea id="description" placeholder="Tell us about your business, services, and audience"></textarea>
+        <label for="theme">Website style</label>
+        <select id="theme">
+          <option value="#304cbb">Professional Blue</option>
+          <option value="#176b45">Forest Green</option>
+          <option value="#6941a5">Royal Purple</option>
+          <option value="#222222">Modern Black</option>
+        </select>
+        <div class="actions">
+          <button class="btn primary" type="submit">Create Starter Website</button>
+        </div>
+      </form>
+      <div id="result" class="hidden">
+        <h3>Your starter website code</h3>
+        <p>This creates a simple starter page from your details. It does not use an AI service yet.</p>
+        <pre id="output"></pre>
+        <button id="download" class="btn primary" type="button">Download Website HTML</button>
       </div>
     </section>
 
     <section id="templates">
-      <h2>Choose Your Website</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Business Websites</h3>
-          <p>Present your services, business information, and contact details.</p>
+      <h2>Choose a Template</h2>
+      <p>Select a design to start with. It will fill in the builder for you.</p>
+      <div class="templates">
+        <article class="template">
+          <h3>Business</h3>
+          <p>A professional layout for a company or service.</p>
+          <button class="btn secondary choose" data-name="My Business" data-head="Professional services you can trust" data-color="#304cbb">Use Template</button>
         </article>
-        <article class="card">
-          <h3>Nonprofit Websites</h3>
-          <p>Share your mission, programs, events, and ways to support your work.</p>
+        <article class="template">
+          <h3>Portfolio</h3>
+          <p>Showcase your work, skills, and projects.</p>
+          <button class="btn secondary choose" data-name="My Portfolio" data-head="Explore my work" data-color="#6941a5">Use Template</button>
         </article>
-        <article class="card">
-          <h3>Portfolio Websites</h3>
-          <p>Showcase your projects, skills, accomplishments, and creative work.</p>
-        </article>
-        <article class="card">
-          <h3>Education Websites</h3>
-          <p>Organize learning materials, course descriptions, and resources.</p>
+        <article class="template">
+          <h3>Online Store</h3>
+          <p>Introduce products and help customers find you.</p>
+          <button class="btn secondary choose" data-name="My Store" data-head="Discover our products" data-color="#176b45">Use Template</button>
         </article>
       </div>
     </section>
 
-    <section class="build" id="build">
-      <h2>Your Next Step Starts Here</h2>
-      <p class="intro">RoyalSites is your starting point for creating and publishing websites.</p>
-      <a class="button" href="https://github.com/new">Create a GitHub Repository</a>
-      <p class="intro">This starter version is a demonstration homepage. Visual editing, customer accounts, and automatic website generation will need to be built next.</p>
+    <section id="signin" class="panel">
+      <h2>Sign in with GitHub</h2>
+      <p>Connect your own GitHub account to manage your projects. Secure sign-in is not configured on this demo page yet.</p>
+      <a class="btn primary" href="https://github.com/login" target="_blank" rel="noopener noreferrer">Open GitHub Sign In</a>
     </section>
   </main>
 
-  <footer>
-    <p>♛ RoyalSites</p>
-    <p>Your Vision. Your Kingdom. Online.</p>
-    <p>Independent website project hosted with GitHub Pages.</p>
-  </footer>
+  <footer>RoyalSites — Your ideas, your website.</footer>
+
+  <script>
+    const form = document.getElementById('siteForm');
+    const result = document.getElementById('result');
+    const output = document.getElementById('output');
+    let generatedHTML = '';
+
+    document.querySelectorAll('.choose').forEach(button => {
+      button.addEventListener('click', () => {
+        document.getElementById('siteName').value = button.dataset.name;
+        document.getElementById('headline').value = button.dataset.head;
+        document.getElementById('theme').value = button.dataset.color;
+        document.getElementById('builder').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('siteName').value;
+      const headline = document.getElementById('headline').value || name;
+      const description = document.getElementById('description').value;
+      const color = document.getElementById('theme').value;
+      const safe = text => text.replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[char]);
+
+      generatedHTML = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${safe(name)}</title>
+<style>body{font-family:Arial,sans-serif;margin:0;color:#222}
+header{background:${color};color:white;padding:40px 20px;text-align:center}
+main{max-width:800px;margin:40px auto;padding:0 20px;line-height:1.7}</style>
+</head><body><header><h1>${safe(name)}</h1><p>${safe(headline)}</p></header>
+<main><p>${safe(description)}</p></main></body></html>`;
+      output.textContent = generatedHTML;
+      result.classList.remove('hidden');
+      result.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const blob = new Blob([generatedHTML], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'my-website.html';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
 </body>
 </html>
