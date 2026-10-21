@@ -1,1 +1,160 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoyalSites | Build Your Kingdom Online</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #142744;
+      background: #f3f6fb;
+    }
+    header {
+      background: #071b33;
+      color: white;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-size: 27px; font-weight: bold; }
+    .gold { color: #ffc43d; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #071b33, #14548b);
+      color: white;
+    }
+    .hero h1 { font-size: clamp(38px, 7vw, 64px); margin: 0 0 15px; }
+    .hero p { line-height: 1.7; max-width: 620px; margin: 0 auto 25px; }
+    .button {
+      display: inline-block;
+      background: #ffc43d;
+      color: #071b33;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 7px;
+      font-weight: bold;
+      margin: 5px;
+    }
+    section { padding: 45px 20px; }
+    h2 { text-align: center; font-size: 30px; }
+    .intro { text-align: center; line-height: 1.7; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 1050px;
+      margin: 28px auto 0;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px #071b3312;
+    }
+    .card h3 { color: #14548b; }
+    .card p { line-height: 1.6; }
+    .build { background: #e3edf9; text-align: center; }
+    footer {
+      background: #071b33;
+      color: #d9e5f3;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { line-height: 2.2; }
+      .hero { padding: 55px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">♛ Royal<span class="gold">Sites</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#templates">Templates</a>
+      <a href="#build">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Build Your Kingdom Online.</h1>
+      <p>Create a website for your business, nonprofit, portfolio, or big idea. RoyalSites is designed to help you take control of your online presence.</p>
+      <a class="button" href="#build">Start Building</a>
+      <a class="button" href="#templates">Explore Templates</a>
+    </section>
+
+    <section id="features">
+      <h2>Welcome to RoyalSites</h2>
+      <p class="intro">A new vision for website creation: simple to start, flexible to customize, and built to grow.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>✦ Easy to Customize</h3>
+          <p>Build your brand with your own words, colors, images, and ideas.</p>
+        </article>
+        <article class="card">
+          <h3>⌘ More Control</h3>
+          <p>Keep your website files in your own GitHub repository.</p>
+        </article>
+        <article class="card">
+          <h3>▣ Mobile Friendly</h3>
+          <p>Give visitors a clean experience on phones, tablets, and computers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="templates">
+      <h2>Choose Your Website</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Business Websites</h3>
+          <p>Present your services, business information, and contact details.</p>
+        </article>
+        <article class="card">
+          <h3>Nonprofit Websites</h3>
+          <p>Share your mission, programs, events, and ways to support your work.</p>
+        </article>
+        <article class="card">
+          <h3>Portfolio Websites</h3>
+          <p>Showcase your projects, skills, accomplishments, and creative work.</p>
+        </article>
+        <article class="card">
+          <h3>Education Websites</h3>
+          <p>Organize learning materials, course descriptions, and resources.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="build" id="build">
+      <h2>Your Next Step Starts Here</h2>
+      <p class="intro">RoyalSites is your starting point for creating and publishing websites.</p>
+      <a class="button" href="https://github.com/new">Create a GitHub Repository</a>
+      <p class="intro">This starter version is a demonstration homepage. Visual editing, customer accounts, and automatic website generation will need to be built next.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>♛ RoyalSites</p>
+    <p>Your Vision. Your Kingdom. Online.</p>
+    <p>Independent website project hosted with GitHub Pages.</p>
+  </footer>
+</body>
+</html>
